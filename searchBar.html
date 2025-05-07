@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <form onsubmit="search(); return false;">
+      <input id="query" type="text" placeholder="Search..." />
+      <button type="submit">Go</button>
+    </form>
+    <script>
+      function search() {
+        const q = document.getElementById('query').value;
+        console.log(q)
+      }
+    </script>
+  </body>
+</html>
