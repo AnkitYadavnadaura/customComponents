@@ -1,14 +1,57 @@
 <html>
-  <body>
-    <form onsubmit="search(); return false;">
-      <input id="query" type="text" placeholder="Search..." />
-      <button type="submit">Go</button>
-    </form>
-    <script>
-      function search() {
-        const q = document.getElementById('query').value;
-        console.log(q)
-      }
-    </script>
-  </body>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f8f9fa, #e0e0e0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    form {
+      display: flex;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+    }
+    input[type="text"] {
+      flex: 1;
+      padding: 16px;
+      border: none;
+      outline: none;
+      font-size: 18px;
+    }
+    button {
+      padding: 16px 24px;
+      border: none;
+      background: #007BFF;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <form onsubmit="search(); return false;">
+    <input type="text" id="query" placeholder="Search the web..." />
+    <button type="submit">Search</button>
+  </form>
+  <script>
+    function search() {
+      const query = document.getElementById('query').value;
+     console.log(query)
+    }
+  </script>
+</body>
 </html>
